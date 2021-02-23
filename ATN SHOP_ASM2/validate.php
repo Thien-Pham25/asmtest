@@ -13,7 +13,7 @@ function test_input($data)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  $adminname = test_input($_POST["adminName"]);
+  $adminName = test_input($_POST["adminName"]);
   $password = test_input($_POST["password"]);
   $stmt = $connect->prepare("SELECT * FROM adminLogin");
   $stmt->execute();
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   foreach ($users as $user) {
 
-    if (($user['adminName'] == $adminname) &&
+    if (($user['adminName'] == $adminName) &&
       ($user['password'] == $password)
     ) {
       header("Location: adminpage.php");
