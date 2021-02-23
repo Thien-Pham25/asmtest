@@ -13,6 +13,8 @@ function test_input($data)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+  echo="helloworld";
+  
   $adminName = test_input($_POST["adminName"]);
   $password = test_input($_POST["password"]);
   $stmt = $connect->prepare("SELECT * FROM adminLogin");
