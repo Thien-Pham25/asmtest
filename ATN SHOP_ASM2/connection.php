@@ -1,6 +1,5 @@
 <?php
 
-
 try {
   $dbConn = pg_connect("host=ec2-54-74-156-137.eu-west-1.compute.amazonaws.com port=5432 dbname=d7fkqs4e2revk2 user=adocsvsxqmurpc
   );
