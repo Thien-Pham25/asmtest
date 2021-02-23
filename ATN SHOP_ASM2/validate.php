@@ -13,15 +13,15 @@ function test_input($data)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  $adminname = test_input($_POST["adminname"]);
+  $adminname = test_input($_POST["adminName"]);
   $password = test_input($_POST["password"]);
-  $stmt = $connect->prepare("SELECT * FROM adminlogin");
+  $stmt = $connect->prepare("SELECT * FROM adminLogin");
   $stmt->execute();
   $users = $stmt->fetchAll();
 
   foreach ($users as $user) {
 
-    if (($user['adminname'] == $adminname) &&
+    if (($user['adminName'] == $adminname) &&
       ($user['password'] == $password)
     ) {
       header("Location: adminpage.php");
