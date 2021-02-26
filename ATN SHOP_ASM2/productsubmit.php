@@ -20,10 +20,10 @@ if ($connect === false) {
 $query = "INSERT INTO product (product_name, product_price, product_category, atn_store, product_quantity, product_description) 
 VALUES('$product_name', '$product_price', '$product_category', '$atn_store', '$product_quantity', '$product_description');";
 $result = pg_query($connect, $query);
-/*if ($result) {
+if ($result) {
   echo "<script>alert('Record added succesfully!, Refresh');</script>";
   header('refresh: 3; url=productform.php');
 } else {
   echo ("ERROR + $query") . pg_errormessage($query);
-}*/
+}
 pg_close($connect);
