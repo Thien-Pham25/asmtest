@@ -17,7 +17,6 @@ if ($account === false) {
   $query = "SELECT * FROM staff WHERE username = '$username' AND \"password\" = '$password'";
   $result = pg_query($account, $query);
   $count = pg_num_rows($result);
-  echo ("Login successfully!");
   if ($count == 1) {
     echo ("Login successfully!");
     session_start();
