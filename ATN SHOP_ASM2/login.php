@@ -18,7 +18,7 @@ if ($account === false) {
   $result = pg_query($account, $query);
   $count = pg_num_rows($result);
   if ($count == 1) {
-    echo ("Login successfully!");
+    //echo ("Login successfully!");
     session_start();
     $_SESSION["username"] = $username;
     header('Location: ./productform.php');
