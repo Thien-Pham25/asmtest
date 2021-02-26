@@ -47,7 +47,6 @@ $resultCheck = pg_num_rows($result);
         <tbody>
           <?php
           if ($resultCheck > 0) {
-            echo "<script>alert('Connect successfully!');</script>";
             while ($row = pg_fetch_assoc($result)) {
           ?>
               <tr>
