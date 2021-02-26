@@ -21,7 +21,7 @@ $query = "INSERT INTO public.product (product_name, product_price, product_categ
 $result = pg_query($connect, $query);
 if ($result) {
   echo "<script>alert('Record added succesfully!, Refresh');</script>";
-  header('refresh: 3; url=shopsite/productform.php');
+  header('refresh: 3; url=productform.php');
 } else {
   echo ("ERROR + $query") . pg_errormessage($query);
 }
