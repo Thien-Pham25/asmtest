@@ -1,2 +1,2 @@
 <?php
-include('/bosssite/bossindex.html');
+include('./bosssite/bossindex.html');
