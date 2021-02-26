@@ -17,11 +17,9 @@ if ($connect === false) {
   $product_description = $_POST['product-description'];
 }
 //echo ("Connect successfully!");
-
 $query = "INSERT INTO product (product_name, product_price, product_category, atn_store, product_quantity, product_description) 
-VALUES('$productname', '$productprice', '$productcategory', '$atnstore', '$productquantity', '$productdescription');";
+VALUES('$product_name', '$product_price', '$product_category', '$atn_store', '$product_quantity', '$product_description');";
 $result = pg_query($connect, $query);
-//echo ("Connect successfully!");
 /*if ($result) {
   echo "<script>alert('Record added succesfully!, Refresh');</script>";
   header('refresh: 3; url=productform.php');
