@@ -21,7 +21,7 @@ if ($account === false) {
     echo ("Login successfully!");
     session_start();
     $_SESSION["username"] = $username;
-    header('Location: ./productform.php');
+    header('Location: /productform.php');
   } else {
     echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
     header('refresh: 5; url=./index.php'); //wrong reset
