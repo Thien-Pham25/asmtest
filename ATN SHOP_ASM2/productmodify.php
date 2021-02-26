@@ -51,15 +51,29 @@ $resultCheck = pg_num_rows($result);
             while ($row = pg_fetch_assoc($result)) {
           ?>
               <tr>
-                <td><?php echo $row['product_id']; ?></td>
-                <td><?php echo $row['product_name']; ?></td>
-                <td><?php echo $row['product_price,']; ?></td>
-                <td><?php echo $row['product_category']; ?></td>
-                <td><?php echo $row['atn_store']; ?></td>
-                <td><?php echo $row['product_quantity']; ?></td>
-                <td><?php echo $row['product_description']; ?></td>
                 <td>
-                  <div onclick="alertUpdate()" class="btn-group" data-toggle="buttons"><a href="#" class="btn btn-primary btn-sm">View</a></div>
+                  <?php echo $row['product_id']; ?>
+                </td>
+                <td>
+                  <?php echo $row['product_name']; ?>
+                </td>
+                <td>
+                  <?php echo $row['product_price,']; ?>
+                </td>
+                <td>
+                  <?php echo $row['product_category']; ?>
+                </td>
+                <td>
+                  <?php echo $row['atn_store']; ?>
+                </td>
+                <td>
+                  <?php echo $row['product_quantity']; ?>
+                </td>
+                <td>
+                  <?php echo $row['product_description']; ?>
+                </td>
+                <td>
+                  <div onclick="alertUpdate()" class="btn-group" data-toggle="buttons"><a href="/productdelete.php?rn=$result[product_id']" class="btn btn-primary btn-sm">Delete</a></div>
                 </td>
               </tr>
           <?php
