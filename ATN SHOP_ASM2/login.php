@@ -22,7 +22,7 @@ if ($account === false) {
     header('Location: /productform.php');
   } else {
     echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
-    header('refresh: 5; url=/index.php'); //wrong reset
+    header('refresh: 2; url=/index.php'); //wrong reset
   }
 }
 pg_close($account);
