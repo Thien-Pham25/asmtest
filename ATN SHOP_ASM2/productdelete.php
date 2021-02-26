@@ -9,7 +9,7 @@ if ($connect === false) {
   die("ERROR: Could not connect to the database server!");
 } else {
   //echo ("Connect successfully!");
-  $product_id = $_GET['p_id'];
+  $product_id = $_GET['product_id'];
 }
 //echo ("Connect successfully!");
 $query = "DELETE FROM product WHERE PRODUCT ID = '$product_id'";
