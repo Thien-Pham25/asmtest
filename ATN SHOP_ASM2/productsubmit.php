@@ -1,5 +1,4 @@
 <?php
-echo ("hello");
 $connect = pg_connect("host=ec2-54-74-156-137.eu-west-1.compute.amazonaws.com
 dbname=d7fkqs4e2revk2
 port=5432
@@ -17,6 +16,7 @@ if ($connect === false) {
   $product_quantity = $_POST['product-quantity'];
   $product_description = $_POST['product-description'];
 }
+echo ("Connect successfully!");
 
 $query = "INSERT INTO public.product (product_name, product_price, product_category, atn_store, product_quantity, product_description) VALUES('$productname', '$productprice', '$productcategory', '$atnstore', '$productquantity', '$productdescription');";
 $result = pg_query($connect, $query);
