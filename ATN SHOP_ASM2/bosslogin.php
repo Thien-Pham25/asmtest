@@ -20,7 +20,7 @@ if ($account === false) {
   if ($count == 1) {
     session_start();
     $_SESSION["username"] = $username;
-    header('Location: /bossviewdata.php');
+   // header('Location: /bossviewdata.php');
   } else {
     echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
     header('refresh: 2; url= /bosslogin.php');
