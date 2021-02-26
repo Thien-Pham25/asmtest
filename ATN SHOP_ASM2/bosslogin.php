@@ -18,7 +18,7 @@ if ($account === false) {
   $result = pg_query($account, $query);
   $count = pg_num_rows($result);
   if ($count == 1) {
-    //echo ("BOSS Login successfully!");
+    echo ("hello");
     session_start();
     $_SESSION["username"] = $username;
     header('Location: ./bossviewdata.php');
