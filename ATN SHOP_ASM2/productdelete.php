@@ -5,14 +5,11 @@ port=5432
 user=adocsvsxqmurpc
 password=c3beef8fa5925724b28a930ce5df54d58341c4afe915e1ca1bf29643f326491f
                     sslmode=require");
-$query = "select product_id, product_name, product_price, product_category, atn_store, product_quantity, product_description from product ;";
-$result = pg_query($con, $query);
-$resultCheck = pg_num_rows($result);
 if ($connect === false) {
   die("ERROR: Could not connect to the database server!");
 } else {
   //echo ("Connect successfully!");
-  $product_id = $_GET['product_id'];
+  $product_id = $_GET['id'];
 }
 //echo ("Connect successfully!");
 $query = "DELETE FROM product WHERE PRODUCTID='$product_id'";
