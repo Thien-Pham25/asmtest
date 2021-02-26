@@ -16,10 +16,11 @@ if ($connect === false) {
   $product_quantity = $_POST['product-quantity'];
   $product_description = $_POST['product-description'];
 }
-echo ("Connect successfully!");
+//echo ("Connect successfully!");
 
 $query = "INSERT INTO product (product_name, product_price, product_category, atn_store, product_quantity, product_description) VALUES('$productname', '$productprice', '$productcategory', '$atnstore', '$productquantity', '$productdescription');";
 $result = pg_query($connect, $query);
+echo ("Connect successfully!");
 if ($result) {
   echo "<script>alert('Record added succesfully!, Refresh');</script>";
   header('refresh: 3; url=productform.php');
