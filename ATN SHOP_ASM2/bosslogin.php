@@ -21,10 +21,10 @@ if ($account === false) {
     echo ("hello");
     session_start();
     $_SESSION["username"] = $username;
-    header('Location: /bossviewdata.php');
+    header('Location: ./bosssite/bossviewdata.php');
   } else {
     echo ("Wrong username or password. Please try again!") . pg_errormessage($query);
-    header('refresh: 5; url=/bosslogin.php');
+    header('refresh: 5; url= ./bosslogin.php');
   }
 }
 pg_close($account);
