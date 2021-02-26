@@ -22,10 +22,10 @@ $query = "INSERT INTO product (product_name, product_price, product_category, at
 VALUES('$productname', '$productprice', '$productcategory', '$atnstore', '$productquantity', '$productdescription');";
 $result = pg_query($connect, $query);
 //echo ("Connect successfully!");
-if ($result) {
+/*if ($result) {
   echo "<script>alert('Record added succesfully!, Refresh');</script>";
   header('refresh: 3; url=productform.php');
 } else {
   echo ("ERROR + $query") . pg_errormessage($query);
-}
+}*/
 pg_close($connect);
