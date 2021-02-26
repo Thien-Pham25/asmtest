@@ -9,12 +9,12 @@ if ($connect === false) {
   die("ERROR: Could not connect to the database server!");
 } else {
   //echo ("Connect successfully!");
-  $productname = $_POST['product-name'];
-  $productprice = $_POST['product-price'];
-  $productcategory = $_POST['product-category'];
-  $atnstore = $_POST['store'];
-  $productquantity = $_POST['product-quantity'];
-  $productdescription = $_POST['product-description'];
+  $product_name = $_POST['product-name'];
+  $product_price = $_POST['product-price'];
+  $product_category = $_POST['product-category'];
+  $atn_store = $_POST['store'];
+  $product_quantity = $_POST['product-quantity'];
+  $product_description = $_POST['product-description'];
 }
 
 $query = "INSERT INTO public.product (product_name, product_price, product_category, atn_store, product_quantity, product_description) VALUES('$productname', '$productprice', '$productcategory', '$atnstore', '$productquantity', '$productdescription');";
