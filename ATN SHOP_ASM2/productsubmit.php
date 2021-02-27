@@ -8,7 +8,7 @@ password=c3beef8fa5925724b28a930ce5df54d58341c4afe915e1ca1bf29643f326491f
 if ($connect === false) {
   die("ERROR: Could not connect to the database server!");
 } else {
-  //echo ("Connect successfully!");
+  echo ("Connect successfully!");
   $product_name = $_POST['product-name'];
   $product_price = $_POST['product-price'];
   $product_category = $_POST['product-category'];
